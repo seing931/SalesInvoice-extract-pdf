@@ -1,0 +1,11 @@
+@SalesInvoiceExtPdf_HostAddress = http://localhost:5240
+
+###
+# Extract PDF
+POST {{SalesInvoiceExtPdf_HostAddress}}/api/salesinv/extract
+Content-Type: multipart/form-data
+
+###
+# Save Invoice
+POST {{SalesInvoiceExtPdf_HostAddress}}/api/salesinv/save
+Content-Type: application/json
