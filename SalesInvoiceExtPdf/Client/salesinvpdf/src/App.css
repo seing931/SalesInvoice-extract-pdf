@@ -1,0 +1,77 @@
+body { font-family: 'Inter', -apple-system, sans-serif; margin: 0; padding: 0; }
+.header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px; }
+.invoice-title { font-size: 42px; font-weight: 700; margin-bottom: 20px; }
+.title { font-size: 30px; font-weight: 700; margin-bottom: 20px; }
+.invoice-meta { display: flex; gap: 30px; font-size: 14px; }
+.content { padding: 40px; }
+.parties { display: flex; justify-content: space-between; margin-bottom: 40px; background: #f8f9fa; padding: 30px; border-radius: 12px; }
+.party h3 { color: #667eea; font-size: 14px; margin-bottom: 10px; font-weight: 600; }
+table { width: 100%; border-collapse: collapse; margin: 30px 0; }
+th { background: #667eea; color: white; padding: 15px; text-align: left; font-weight: 600; }
+td { padding: 15px; border-bottom: 1px solid #e9ecef; }
+.totals { width: 350px; margin-left: auto; background: #f8f9fa; padding: 20px; border-radius: 12px; }
+.totals tr td { border: none; padding: 10px 0; }
+.total-row { font-weight: bold; font-size: 20px; color: #667eea; border-top: 2px solid #667eea; padding-top: 15px !important; }
+.notes { margin-top: 40px; padding: 25px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 12px; }
+.upload-section {margin-bottom: 20px;}
+.button-container {margin-top: 10pt;display: flex;justify-content: flex-end;}
+
+/* CSS */
+.button-72 {
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(rgba(179, 132, 201, .84), rgba(57, 31, 91, .84) 50%);
+  border-radius: 42px;
+  border-width: 0;
+  box-shadow: rgba(57, 31, 91, 0.24) 0 2px 2px,rgba(179, 132, 201, 0.4) 0 8px 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  font-family: Quicksand,sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: .04em;
+  line-height: 16px;
+  margin: 0;
+  padding: 18px 18px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,rgba(255, 255, 255, 0.2) 0 0 12px,rgba(57, 31, 91, 0.6) 1px 1px 4px,rgba(57, 31, 91, 0.32) 4px 4px 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+}
+
+.button-72:hover {
+  background-image: linear-gradient(#B384C9, #391F5B 50%);
+}
+
+@media (min-width: 768px) {
+  .button-72 {
+    font-size: 21px;
+    padding: 18px 34px;
+  }
+}
+
+input::file-selector-button {
+  background-image: linear-gradient(
+    to right,
+    #ff7a18,
+    #af002d,
+    #319197 100%,
+    #319197 200%
+  );
+  background-position-x: 0%;
+  background-size: 200%;
+  border: 0;
+  border-radius: 42px;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-shadow: 0 1px 1px #333;
+  transition: all 0.25s;
+}
+input::file-selector-button:hover {
+  background-position-x: 100%;
+}
