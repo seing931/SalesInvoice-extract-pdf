@@ -1,0 +1,44 @@
+[
+  {
+    "ContainingType": "SalesInvoiceExtPdf.Controllers.SalesInvController",
+    "Method": "GetAll",
+    "RelativePath": "api/SalesInv",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SalesInvoiceExtPdf.Controllers.SalesInvController",
+    "Method": "Extract",
+    "RelativePath": "api/SalesInv/extract",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SalesInvoiceExtPdf.Controllers.SalesInvController",
+    "Method": "Save",
+    "RelativePath": "api/SalesInv/save",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "SalesInvoiceExtPdf.Models.SalesMaster",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,185 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "SalesInvoiceExtPdf",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/SalesInv/extract": {
+      "post": {
+        "tags": [
+          "SalesInv"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "file": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/SalesInv/save": {
+      "post": {
+        "tags": [
+          "SalesInv"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesMaster"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesMaster"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesMaster"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/SalesInv": {
+      "get": {
+        "tags": [
+          "SalesInv"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "SalesItems": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sid": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemName": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemDesc": {
+            "type": "string",
+            "nullable": true
+          },
+          "qty": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rate": {
+            "type": "number",
+            "format": "double"
+          },
+          "amt": {
+            "type": "number",
+            "format": "double"
+          },
+          "salesMaster": {
+            "$ref": "#/components/schemas/SalesMaster"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SalesMaster": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderID": {
+            "type": "string",
+            "nullable": true
+          },
+          "billTo": {
+            "type": "string",
+            "nullable": true
+          },
+          "shipTo": {
+            "type": "string",
+            "nullable": true
+          },
+          "invDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "shipMode": {
+            "type": "string",
+            "nullable": true
+          },
+          "discPrc": {
+            "type": "number",
+            "format": "double"
+          },
+          "shipping": {
+            "type": "number",
+            "format": "double"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SalesItems"
+            },
+            "nullable": true
+          },
+          "uploadedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "uploadedBy": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "SalesInv"
+    }
+  ]
+}
